@@ -3,129 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAVIOR SSS - School Website</title>
+    <title>Home | SAVIOR SSS</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-content">
-                    <h1 class="logo">SAVIOR SSS</h1>
-                    <ul class="nav-menu">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
-                        <li><a href="staff.html">Staff</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SAVIOR SSS</h1>
+                <p class="motto">ENDURE AND SUCCEED</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="staff.html">Staff</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="hero" aria-label="Site hero">
+        <div class="hero-slides" aria-hidden="false">
+            <div class="hero-slide" style="background-image: url('images/background.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/students.jpeg')"></div>
+        </div>
+        <div class="hero-content">
+            <h1>SAVIOR SSS</h1>
+            <p class="hero-motto">ENDURE AND SUCCEED</p>
+            <p class="hero-subtitle">Mixed Day and Boarding | O'Level and A'Level (Arts &amp; Science)</p>
+            <div class="hero-buttons">
+                <a href="admissions.html" class="btn btn-primary">Apply Now</a>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="hero-calendar" id="heroCalendar">
+                <div class="hc-header">
+                    <button class="hc-prev" aria-label="Previous month">‹</button>
+                    <div class="hc-month" id="hcMonthYear">Month Year</div>
+                    <button class="hc-next" aria-label="Next month">›</button>
+                </div>
+                <div class="hc-grid">
+                    <div class="hc-weekdays">
+                        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                    </div>
+                    <div class="hc-days" id="hcDays"></div>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to SAVIOR Secondary School</h1>
-            <p>Nurturing Excellence in Education</p>
-            <a href="admissions.html" class="cta-button">Apply Now</a>
         </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
     </section>
 
-    <!-- Main Content -->
     <main>
-        <!-- Quick Info Section -->
         <section class="quick-info">
             <div class="container">
-                <div class="info-card">
-                    <i class="fas fa-book"></i>
-                    <h3>Academics</h3>
-                    <p>O-Level & A-Level Programs</p>
-                    <p>Arts & Science Streams</p>
+                <div class="info-card"><i class="fas fa-book"></i><h3>Academics</h3><p>O-Level &amp; A-Level Programs</p><p>Arts &amp; Science Streams</p></div>
+                <div class="info-card"><i class="fas fa-home"></i><h3>Mixed Boarding</h3><p>Day and Boarding Facilities</p><p>Comfortable Accommodation</p></div>
+                <div class="info-card"><i class="fas fa-users"></i><h3>Expert Staff</h3><p>Qualified Teachers</p><p>Dedicated Support</p></div>
+                <div class="info-card"><i class="fas fa-trophy"></i><h3>Excellence</h3><p>Award-Winning Programs</p><p>Outstanding Results</p></div>
+            </div>
+        </section>
+
+        <section class="about-preview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About SAVIOR SSS</h2>
+                    <p>Education Excellence in Western Uganda</p>
                 </div>
-                <div class="info-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Mixed Boarding</h3>
-                    <p>Day and Boarding Facilities</p>
-                    <p>Comfortable Accommodation</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Expert Staff</h3>
-                    <p>Qualified Teachers</p>
-                    <p>Dedicated Support</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-trophy"></i>
-                    <h3>Excellence</h3>
-                    <p>High Achievement Rates</p>
-                    <p>Award Winning Programs</p>
+                <div class="preview-content">
+                    <p>SAVIOR Secondary School, located in Nyakinama, Bufumbira, Western Uganda, is a mixed day and boarding institution dedicated to providing quality education. Our Centre No. U3734 ME/32/5760 represents our commitment to excellence in O-Level and A-Level education across Arts and Science streams.</p>
+                    <a href="about.html" class="btn btn-outline">Read Full Story</a>
                 </div>
             </div>
         </section>
 
-        <!-- News Section -->
-        <section class="news-section">
+        <section class="connected-preview">
             <div class="container">
-                <h2>Latest News</h2>
-                <div class="news-grid">
-                    <article class="news-card">
-                        <h3>New Science Lab Opening</h3>
-                        <p>We are excited to announce the opening of our state-of-the-art science laboratory featuring the latest equipment.</p>
-                        <a href="news.html">Read More</a>
-                    </article>
-                    <article class="news-card">
-                        <h3>Sports Day Success</h3>
-                        <p>Our annual sports day was a great success with students showing exceptional athletic performance.</p>
-                        <a href="news.html">Read More</a>
-                    </article>
-                    <article class="news-card">
-                        <h3>New Scholarship Program</h3>
-                        <p>We are now offering merit-based scholarships to deserving students in the upcoming academic year.</p>
-                        <a href="news.html">Read More</a>
-                    </article>
+                <div class="section-header">
+                    <h2>Stay Connected</h2>
+                    <p>Get the latest updates and news from SAVIOR SSS</p>
                 </div>
+                <div class="connected-grid">
+                    <div class="connected-card">
+                        <div class="connected-icon"><i class="fab fa-facebook"></i></div>
+                        <h3>Facebook Updates</h3>
+                        <p>Follow us on Facebook for the latest news, events, and announcements</p>
+                        <a href="https://www.facebook.com/search/top?q=SAVIOR%20Secondary%20School%20Kisoro" target="_blank" rel="noopener" class="btn btn-primary"><i class="fab fa-facebook"></i> View Updates</a>
+                    </div>
+                    <div class="connected-card">
+                        <div class="connected-icon"><i class="fas fa-phone"></i></div>
+                        <h3>Contact Office</h3>
+                        <p>Call or visit our school office for current information and inquiries</p>
+                        <a href="contact.html" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
+                    </div>
+                    <div class="connected-card">
+                        <div class="connected-icon"><i class="fas fa-newspaper"></i></div>
+                        <h3>Google Search</h3>
+                        <p>Search online for "SAVIOR Secondary School Kisoro" to find recent updates</p>
+                        <a href="https://www.google.com/search?q=SAVIOR+Secondary+School+Kisoro+news" target="_blank" rel="noopener" class="btn btn-outline"><i class="fas fa-search"></i> Search News</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to Join SAVIOR SSS?</h2>
+                <p>Applications are now open for the upcoming academic year</p>
+                <a href="admissions.html" class="btn btn-white">Apply Today</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>SAVIOR Secondary School</h3>
-                    <p>Location: Kisoro District, Mount Muhabura, Uganda</p>
-                    <p>Contact: +256 760319708 | +256 776701839</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>SAVIOR SSS</h3>
+                <p><strong>Motto:</strong> ENDURE AND SUCCEED</p>
+                <p><strong>Type:</strong> Mixed Day and Boarding</p>
+                <p><strong>Programmes:</strong> O'Level and A'Level (Arts &amp; Science)</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 SAVIOR Secondary School. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/?api=1&query=Nyakinama%20Bufumbira%20Western%20Uganda%20P.O.%20Box%20151%20Kisoro" target="_blank" rel="noopener">Nyakinama, Bufumbira, Western Uganda</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@savior-sss.ac.ug">info@savior-sss.ac.ug</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+256785376582">+256 785 376 582</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+256782744355">+256 782 744 355</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://web.whatsapp.com/send?phone=256776252838&text=Hello%2C%20I%20would%20like%20to%20get%20in%20touch%20with%20SAVIOR%20SSS.&app_absent=0" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/search/top?q=SAVIOR%20Secondary%20School%20Kisoro" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                </div>
             </div>
         </div>
+        <div class="footer-bottom"><p>&copy; 2024 SAVIOR SSS. All rights reserved. | Centre No: U3734 ME/32/5760</p></div>
     </footer>
+
+    <div class="image-viewer" id="imageViewer" aria-hidden="true">
+        <button type="button" class="image-viewer-close" id="imageViewerClose" aria-label="Close image">&times;</button>
+        <img id="imageViewerImg" alt="Expanded view">
+    </div>
 
     <script src="js/script.js"></script>
 </body>
