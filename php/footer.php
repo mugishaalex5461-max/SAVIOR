@@ -99,6 +99,6 @@
         <img id="imageViewerImg" alt="Expanded view">
     </div>
     
-    <script src="/SAVIOR_SSS/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

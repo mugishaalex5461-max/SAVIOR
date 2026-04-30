@@ -275,7 +275,28 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!validateAdmissionForm()) {
                 e.preventDefault();
                 alert('Please fill in all required fields correctly.');
+                return;
             }
+
+            e.preventDefault();
+
+            const destinationEmail = applicationForm.dataset.submitEmail || 'info@savior-sss.ac.ug';
+            const formData = new FormData(applicationForm);
+            const subject = encodeURIComponent('Admission Inquiry - ' + (formData.get('name') || 'New Applicant'));
+            const bodyLines = [
+                'Admission Inquiry from SAVIOR SSS website',
+                '',
+                'Full Name: ' + (formData.get('name') || ''),
+                'Email: ' + (formData.get('email') || ''),
+                'Phone: ' + (formData.get('phone') || ''),
+                'Applying for: ' + (formData.get('level') || ''),
+                'Stream: ' + (formData.get('stream') || ''),
+                '',
+                'Message:',
+                (formData.get('message') || '').toString()
+            ];
+
+            window.location.href = 'mailto:' + encodeURIComponent(destinationEmail) + '?subject=' + subject + '&body=' + encodeURIComponent(bodyLines.join('\n'));
         });
     }
 
@@ -284,7 +305,27 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!validateContactForm()) {
                 e.preventDefault();
                 alert('Please fill in all required fields correctly.');
+                return;
             }
+
+            e.preventDefault();
+
+            const destinationEmail = contactForm.dataset.submitEmail || 'info@savior-sss.ac.ug';
+            const formData = new FormData(contactForm);
+            const subject = encodeURIComponent((formData.get('subject') || 'Contact Form Message') + ' - SAVIOR SSS');
+            const bodyLines = [
+                'Message from SAVIOR SSS website',
+                '',
+                'Full Name: ' + (formData.get('name') || ''),
+                'Email: ' + (formData.get('email') || ''),
+                'Phone: ' + (formData.get('phone') || ''),
+                'Subject: ' + (formData.get('subject') || ''),
+                '',
+                'Message:',
+                (formData.get('message') || '').toString()
+            ];
+
+            window.location.href = 'mailto:' + encodeURIComponent(destinationEmail) + '?subject=' + subject + '&body=' + encodeURIComponent(bodyLines.join('\n'));
         });
     }
 

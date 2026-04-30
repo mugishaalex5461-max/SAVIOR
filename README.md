@@ -1,12 +1,12 @@
 # SAVIOR_SSS — School Website
 
-This repository contains the website project for SAVIOR_SSS (PHP + static assets).
+This repository contains the website project for SAVIOR_SSS, including both the original PHP source and a static HTML export for GitHub Pages.
 
 Important: This project uses PHP files and requires a PHP-capable webserver (Apache, Nginx + PHP). GitHub Pages only serves static sites and cannot run PHP.
 
 Deployment options
-- Host on a PHP-capable server (cPanel, shared hosting, VPS). Use the provided GitHub Actions workflow to deploy via FTP.
-- Convert site to static HTML (if you don't use server-side PHP) and deploy to GitHub Pages instead.
+- GitHub Pages: use the static `.html` pages in the repository root with `.github/workflows/deploy-pages.yml`.
+- PHP hosting: use the legacy PHP source on a PHP-capable server if you need the database-backed version.
 
 Quick local steps
 
@@ -27,7 +27,13 @@ git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 git push -u origin main
 ```
 
-Deploy via FTP (recommended for PHP hosting)
+Deploy to GitHub Pages
+
+1. Push the repository to GitHub.
+2. In repository settings, enable GitHub Pages using GitHub Actions.
+3. The workflow `.github/workflows/deploy-pages.yml` will publish the static site on each push to `main`.
+
+Deploy via FTP (only for the PHP version)
 
 1. In your GitHub repository settings, create the following Secrets:
 - `FTP_HOST` — e.g. `ftp.example.com`

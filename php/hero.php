@@ -3,8 +3,8 @@
 ?>
 <section class="hero" aria-label="Site hero">
     <div class="hero-slides" aria-hidden="false">
-        <div class="hero-slide" style="background-image: url('/SAVIOR_SSS/images/background.jpg')"></div>
-        <div class="hero-slide" style="background-image: url('/SAVIOR_SSS/images/students.jpeg')"></div>
+        <div class="hero-slide" style="background-image: url('images/background.jpg')"></div>
+        <div class="hero-slide" style="background-image: url('images/students.jpeg')"></div>
     </div>
 
     <?php

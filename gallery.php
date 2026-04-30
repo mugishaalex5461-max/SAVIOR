@@ -27,7 +27,7 @@
                             ?>
                             <div class="gallery-item">
                                 <div class="gallery-image">
-                                    <img src="/SAVIOR_SSS/uploads/<?php echo rawurlencode($image['filename']); ?>" alt="<?php echo htmlspecialchars($image['title']); ?>">
+                                    <img src="uploads/<?php echo rawurlencode($image['filename']); ?>" alt="<?php echo htmlspecialchars($image['title']); ?>">
                                 </div>
                             </div>
                             <?php
@@ -46,7 +46,7 @@
                                 ?>
                                 <div class="gallery-item">
                                     <div class="gallery-image">
-                                        <img src="/SAVIOR_SSS/images/<?php echo rawurlencode($fname); ?>" alt="<?php echo htmlspecialchars($fname); ?>">
+                                        <img src="images/<?php echo rawurlencode($fname); ?>" alt="<?php echo htmlspecialchars($fname); ?>">
                                     </div>
                                 </div>
                                 <?php
