@@ -25,10 +25,10 @@ jobs:
         run: |
           rm -rf _site
           mkdir -p _site
-          cp *.html _site/
-          cp -R css js images _site/
+          cp -v -- *.html _site/ || true
+          cp -Rv css js images _site/ || true
           if [ -d uploads ]; then mkdir -p _site/uploads && cp -R uploads/. _site/uploads/ 2>/dev/null || true; fi
-          cp .nojekyll _site/
+          cp -v .nojekyll _site/ || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
