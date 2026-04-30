@@ -1,0 +1,10 @@
+/.vscode/
+/.history/
+/.idea/
+/.DS_Store
+node_modules/
+vendor/
+.env
+*.log
+uploads/
+.cache/
